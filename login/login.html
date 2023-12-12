@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- <video autoplay muted loop class="back-vedio">
+        <source src="/design4.mp4" type="video/mp4">
+      </video> -->
+
+    <div class="container">
+        <input type="checkbox" id="check">
+    
+        <div class="login form">
+          <header>Login</header>
+          <form  onsubmit="login(event)">
+            <input type="text" id="email" placeholder="Enter your email">
+            <input type="password" id="password"  placeholder="Enter your password">
+            <button class="button">Login</button>
+          </form>
+          <div class="signup">
+            <span class="signup">Don't have an account?
+             <label for="check"><a href="/index.html">Signup</a></label>
+            </span>
+          </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="./login.js" type="module"></script>
+</html>
