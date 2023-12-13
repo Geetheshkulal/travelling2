@@ -28,13 +28,21 @@ window.login = function (e) {
     password: password.value,
   };
 
+  const loginButton = document.querySelector('.form button.button');
+  loginButton.classList.add('loading');
+
+
   signInWithEmailAndPassword(auth, obj.email, obj.password)
     .then(function (success) {
       alert('Login success');
-      window.location.href = "/travel/travel.html";
+      window.location.href = "/travel.html";
     })
     .catch(function (err) {
       alert("Error: " + err.message);
+    })
+    .finally(function () {
+     
+      loginButton.classList.remove('loading');
     });
 
   console.log(obj);

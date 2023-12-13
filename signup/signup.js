@@ -29,17 +29,22 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
         name:name.value,
         email:email.value,
         password:password.value,
-
-        
     }
+    const loginButton = document.querySelector('.form button.button');
+    loginButton.classList.add('loading');
+
     createUserWithEmailAndPassword(auth, obj.email, obj.password)
     .then(function(success){
         alert('signup success');
-        window.location.href = '/travel/travel.html';
+        window.location.href = "/travel.html";
     })
     .catch(function(err){
         alert("error" +err)
     })
+    .finally(function () {
+     
+      loginButton.classList.remove('loading');
+    });
     console.log(obj)
 
   }

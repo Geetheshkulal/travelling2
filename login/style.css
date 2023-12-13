@@ -84,7 +84,7 @@ body {
   text-decoration: underline;
 }
 
-.form button.button {
+/* .form button.button {
   color: #fff;
   background: #009579;
   font-size: 1.2rem;
@@ -93,11 +93,28 @@ body {
   margin-top: 1.7rem;
   cursor: pointer;
   transition: 0.4s;
+} */
+
+.form button.button {
+  color: #fff;
+  background: #009579;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: background 0.4s; 
+}
+.form button.button.loading {
+  background: #006653;
 }
 
 .form button.button:hover {
-  background: #006653;
+  background: #b9c2c0;
 }
+/* .form button.button:hover {
+  background: #006653;
+} */
 
 .signup {
   font-size: 17px;

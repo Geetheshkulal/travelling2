@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRAVEL FRIEND | plan to next</title>
-  <link rel="stylesheet" href="travel.css">
+  <link rel="stylesheet" href="./travel/travel.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css" rel="stylesheet">
   <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
 </head>
@@ -84,13 +84,26 @@
           <div class="image">
             <img src="./images/gadaikallu.png" alt="" srcset="">
           </div>
-          <div class="content-card">
+
+          <!-- <div class="content-card">
             <h4>gadaikallu</h4>
             <p>
               LIFE WITH NO EXCUSES AND TRAVEL WITH NO REGRETS
             </p>
-            <button class="btn-read">read More</button>
-          </div>
+            <button  class="btn-read">read More</button>
+          </div> -->
+
+          <!-- <div class="content-card">
+            <h4>gadaikallu</h4>
+             <button class="btn-read"  onclick="myFunction()">read More</button>
+            <span class="popuptext" id="myPopup">The best feature of this trekking spot is that it has the steps to climb unlike most of the trekking places where the trekkers have to blend all their energy to climb the intricate mountain path</span>
+          </div> -->
+            <div class="content-card">
+    <h4>gadaikallu</h4>
+    <button class="btn-read" onclick="myFunction(this)">Read More</button>
+    <span class="popuptext" id="popup-gadaikallu">The best feature of this trekking spot is that it has the steps to climb unlike most of the trekking places where the trekkers have to blend all their energy to climb the intricate mountain path</span>
+  </div>
+          
         </div>
 
         <div class="card">
@@ -99,10 +112,8 @@
           </div>
           <div class="content-card">
             <h4>Honnavar</h4>
-            <p>
-           LET NATURE TAKE CARE OF U
-            </p>
-            <button class="btn-read">read More</button>
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu">The Western Ghats holds most of the river basin. One of the many reasons why the river is widely renowned is the fact that the river forms the famed Jog Falls.</span>
           </div>
         </div>
 
@@ -262,45 +273,47 @@
     </div>
   </section>
 
-  <section class="contact" id="contact">
-
-    <div class="content">
-      <div class="items">
-
-        <div class="item">
-          <div class="heading">
-            <h1 class="title">Contact our travel agency</h1>
-            <div class="subtitle">We will be replying within 24 hours. </div>
-          </div>
-          <div class="row">
-            <div class="card">
-              <div class="line">
-                <span><i class="ri-phone-line"></i></span>
-                <h4>Call us</h4>
-              </div>
-
-              <p>+91 601543532</p>
-            </div>
-            <div class="card">
-              <div class="line">
-                <span><i class="ri-mail-line"></i></span>
-                <h4>Mail us</h4>
-              </div>
-              <p>contactus@TRAVELFRIEND.com</p>
-            </div>
-          </div>
+<section class="contact" id="contact">
+  <div class="content">
+    <div class="items">
+      <div class="item">
+        <div class="heading">
+          <h1 class="title">Contact our travel agency</h1>
+          <div class="subtitle">We will be replying within 24 hours.</div>
         </div>
-        <div class="item">
-          <form action="" method="post">
-            <input type="mail" class="input" placeholder="Your email">
-            <input type="text" class="input" placeholder="Your Phone">
-            <textarea rows="6" class="input" placeholder="Your Message"></textarea>
-            <button class="btn-contact">send a message!</button>
-          </form>
+        <div class="row">
+          <div class="card">
+            <div class="line">
+              <span><i class="ri-phone-line"></i></span>
+              <h4>Call us</h4>
+            </div>
+            <p>+91 601543532</p>
+          </div>
+          <div class="card">
+            <div class="line">
+              <span><i class="ri-mail-line"></i></span>
+              <h4>Mail us</h4>
+            </div>
+            <p>contactus@TRAVELFRIEND.com</p>
+          </div>
         </div>
       </div>
+      <div class="item">
+        <form id="contactForm" method="">
+          <div class="alert">Your message sent</div>
+          <input type="text" name="email" class="input" id="email" placeholder="Your email">
+          <input type="text" name="phone" class="input" id="phone" placeholder="Your Phone">
+          <textarea name="message" rows="6" class="input" id="message" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn-contact">Send a message!</button>
+        </form>
+      </div>
     </div>
-  </section>
-  <script src="travel.js"></script>
+  </div>
+</section>
+
+  <script src="./travel/travel.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="./travel/mail.js"></script>
 </body>
 </html>

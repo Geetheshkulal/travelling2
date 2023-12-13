@@ -1,3 +1,15 @@
+// function myFunction() {
+//     var popup = document.getElementById("myPopup");
+//     popup.classList.toggle("show");
+//   }
+
+function myFunction(button) {
+    var card = button.closest('.card'); 
+    var popup = card.querySelector('.popuptext'); 
+  
+    popup.classList.toggle('show');
+  }
+
 const navbar = document.getElementById('navbar');
 window.onscroll = function () {
     scrollFunction()
