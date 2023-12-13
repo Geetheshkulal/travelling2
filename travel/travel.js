@@ -62,3 +62,5 @@ ScrollReveal().reveal('.next .card .content-card  p',{
 })
 ScrollReveal().reveal('form .input',scrollrevealOption)
 ScrollReveal().reveal('row .card',scrollrevealOption)
+
+

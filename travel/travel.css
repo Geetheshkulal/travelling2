@@ -701,7 +701,7 @@ footer .rights a {
     }
 }
 
-/* Popup container - can be anything you want */
+
 .content-card {
     position: relative;
     display: inline-block;
@@ -756,4 +756,12 @@ footer .rights a {
   @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
+  }
+
+  .alert
+  {
+    background-color: green;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
   }
