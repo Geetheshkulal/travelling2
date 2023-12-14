@@ -91,13 +91,29 @@ h4 {
     border-top: 1px solid #f35405;
 }
 
-
+.logo{
+    height: 500px;
+  
+    /* background-color: powderblue; */
+    /* min-height: 70vh; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+img{
+    width:50%;
+     height: 500px;
+     
+}
 .home {
     
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 70vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -293,6 +309,7 @@ section .heading .subtitle {
 .next .card .content-card {
     position: absolute;
     bottom: 30px;
+    right: 0;
     left: 0;
     padding: 0rem 1rem;
     transform: translateY(-20px);
@@ -307,18 +324,20 @@ section .heading .subtitle {
 
 
 .next .card .content-card h4 {
+
     font-size: 42px;
     font-family: 'Roboto';
     text-transform: capitalize;
     font-weight: 500;
-    color: #fff;
+    color:  rgb(255, 255, 0);
     letter-spacing: 3px;
 }
 
 .next .card .content-card p {
-    font-size: 16px;
-    font-weight: 300;
-    color: #eee;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(255, 255, 0)
+    
 }
 
 .next .card .content-card .btn-read {
@@ -527,6 +546,8 @@ section .heading .subtitle {
     font-size: 16px;
     line-height: 16px;
     font-weight: 500;
+    border-radius: 5px;
+    transition: all 1s;
 }
 
 .contact .item form .btn-contact {
@@ -541,6 +562,7 @@ section .heading .subtitle {
     font-weight: 500;
     cursor: pointer;
     transition: all 1s;
+    border-radius: 4px;
 }
 
 .contact .item form .btn-contact:hover {
@@ -745,6 +767,7 @@ footer .rights a {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+   
   }
   
   /* Add animation (fade in the popup) */
@@ -757,6 +780,8 @@ footer .rights a {
     from {opacity: 0;}
     to {opacity: 1;}
   }
+
+ 
 
   .alert
   {

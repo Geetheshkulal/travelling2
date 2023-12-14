@@ -35,10 +35,14 @@
     <div class="content">
       <h1>THE <strong>BEST</strong> WAY TO <strong>PLAN YOUR NEXT</strong> ADVENTURE </h1>
       <h4>Explore the colourful SOUTH INDIA like never seen</h4>
-      <button class="btn-explore">Explore more
-         <i class="ri-arrow-right-line"></i> </button>
+      <!-- <button class="btn-explore">Explore more
+         <i class="ri-arrow-right-line"></i> </button> -->
     </div>
   </header>
+
+  <div class="logo">
+    <img class="image" src="./images/logo.png">
+  </div>
 
 
   <section class="about" id="about">
@@ -121,39 +125,40 @@
           <div class="image">
             <img src="./images/netrani.png" alt="" srcset="">
           </div>
-          <div class="content-card">
+          <!-- <div class="content-card">
             <h4>netrani</h4>
             <p>
               There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.
             </p>
             <button class="btn-read">read More</button>
-
+          </div> -->
+          <div class="content-card">
+            <h4>netrani</h4>
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu"> MahaShivaratri is a significant festival that is enthusiastically observed here. Usually, it takes place in February or March..</span>
           </div>
         </div>
         <div class="card">
           <div class="image">
             <img src="./images/karinjeshwara.png" alt="" srcset="">
           </div>
-          <div class="content-card">
-            <h4>karinjeshwara</h4>
-            <p>
-              There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.
-            </p>
-            <button class="btn-read">read More</button>
 
+          <div class="content-card">
+            <!-- <h4>karinjeshwara</h4> -->
+            <p>karinjeshwara</p>
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu">The Western Ghats holds most of the river basin. One of the many reasons why the river is widely renowned is the fact that the river forms the famed Jog Falls.</span>
           </div>
         </div>
         <div class="card">
           <div class="image">
             <img src="./images/st-marys-island.png" alt="" srcset="">
           </div>
+        
           <div class="content-card">
-            <h4>ST-MARYS-ISLAND</h4>
-            <p>
-              There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.
-            </p>
-            <button class="btn-read">read More</button>
-
+            <h4>MARYS-ISLAND</h4>
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu">The Western Ghats holds most of the river basin. One of the many reasons why the river is widely renowned is the fact that the river forms the famed Jog Falls.</span>
           </div>
         </div>
         <div class="card">
@@ -161,11 +166,9 @@
             <img src="./images/varanga.png" alt="" srcset="">
           </div>
           <div class="content-card">
-            <h4>VARANGA</h4>
-            <p>
-              Take only memories, leave only footprintsS
-            </p>
-            <button class="btn-read">read More</button>
+            <h4>varanga</h4>
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu">The Western Ghats holds most of the river basin. One of the many reasons why the river is widely renowned is the fact that the river forms the famed Jog Falls.</span>
           </div>
         </div>
         <div class="card">
@@ -174,11 +177,8 @@
           </div>
           <div class="content-card">
             <h4>Posadi gumpe</h4>
-            <p>
-              Life is either a daring adventure or nothing at all.
-            </p>
-            <button class="btn-read">read More</button>
-
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu">The Western Ghats holds most of the river basin. One of the many reasons why the river is widely renowned is the fact that the river forms the famed Jog Falls.</span>
           </div>
         </div>
 
@@ -188,11 +188,8 @@
           </div>
           <div class="content-card">
             <h4>Ranipuram</h4>
-            <p>
-              Jobs fill your pocket, but adventures fill your soul
-            </p>
-            <button class="btn-read">read More</button>
-
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu">The Western Ghats holds most of the river basin. One of the many reasons why the river is widely renowned is the fact that the river forms the famed Jog Falls.</span>
           </div>
         </div>
 
@@ -201,12 +198,9 @@
             <img src="./images/Korigad Fort.png" alt="" srcset="">
           </div>
           <div class="content-card">
-            <h4>Korigad fort</h4>
-            <p>
-              Remember that happiness is a way of travel not a destination
-            </p>
-            <button class="btn-read">read More</button>
-
+            <h4>Korigad Fort</h4>
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu">The Western Ghats holds most of the river basin. One of the many reasons why the river is widely renowned is the fact that the river forms the famed Jog Falls.</span>
           </div>
         </div>
         <div class="card">
@@ -215,11 +209,8 @@
           </div>
           <div class="content-card">
             <h4>kappil beach</h4>
-            <p>
-              IT FEELS GOOD TO BE LOST IN THE RIGHT DIRECTION
-            </p>
-            <button class="btn-read">read More</button>
-
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu">The Western Ghats holds most of the river basin. One of the many reasons why the river is widely renowned is the fact that the river forms the famed Jog Falls.</span>
           </div>
         </div>
         <div class="card">
@@ -227,26 +218,23 @@
             <img src="./images/Jatayu earth's center.png" alt="" srcset="">
           </div>
           <div class="content-card">
-            <h4>Jatayu earth center</h4>
-            <p>
-              TRAVEL IS NEVER A MATTER OF MONEY BUT OF COURAGE
-            </p>
-            <button class="btn-read">read More</button>
-
+            <h4>Jatayu earth's center</h4>
+            <button class="btn-read" onclick="myFunction(this)">Read More</button>
+            <span class="popuptext" id="popup-gadaikallu">The Western Ghats holds most of the river basin. One of the many reasons why the river is widely renowned is the fact that the river forms the famed Jog Falls.</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="site-banner">
+  <!-- <div class="site-banner">
     <div class="content">
       <div class="row">
         <p>OX <small>&</small> Travel</p>
       </div>
     </div>
 
-  </div>
+  </div> -->
 
   <section class="gallery" id="gallery">
     <div class="heading">
