@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Travel Booking Form</h2>
+<form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="tourist-place">Choose Tourist Place:</label>
+    <select id="tourist-place" name="tourist-place" required>
+        <option value="place1">Tourist Place 1</option>
+        <option value="place2">Tourist Place 2</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <label for="adults">Number of Adults:</label>
+    <input type="number" id="adults" name="adults" min="1" required>
+
+    <label for="children">Number of Children:</label>
+    <input type="number" id="children" name="children" min="0" required>
+
+    <label for="payment-details">Payment Details:</label>
+    <input type="text" id="payment-details" name="payment-details" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+<script src="/app.js"></script>
+</html>

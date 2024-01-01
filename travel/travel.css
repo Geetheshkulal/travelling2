@@ -34,6 +34,7 @@ h4 {
     width: 100%;
     background-color: transparent;
     z-index: 1000;
+  
 }
 
 .nav-bar.active {
@@ -54,6 +55,7 @@ h4 {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+   
 }
 
 .nav-bar .site-logo {
@@ -65,8 +67,8 @@ h4 {
     font-size: 22px;
     line-height: 22px;
     text-transform: capitalize;
-    color: #fff;
-    border-top: 4px solid #fff;
+    color: black;
+    border-top: 4px solid black;
 }
 
 .nav-bar .navigation {
@@ -81,7 +83,8 @@ h4 {
     font-weight: 500;
     font-size: 16px;
     text-transform: capitalize;
-    color: #fff;
+    /* color: #fff; */
+    color: black;
     border-top: 1px solid transparent;
     transition: all 0.6s;
 }
@@ -90,7 +93,35 @@ h4 {
     color: #f35405;
     border-top: 1px solid #f35405;
 }
+.dropdown:hover{
+    color: red;
+ 
+}
+li.dropdown {
+    display: inline-block;
+  }
 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a:hover {background-color:wheat}
+
+.dropdown:hover .dropdown-content {
+  display: grid;
+  grid-gap: 10px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 .logo{
     height: 500px;
   
@@ -120,6 +151,7 @@ img{
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
+    background-image: url('/images/travel.jpg');
 }
 
 .home .content {
@@ -133,6 +165,7 @@ img{
     font-size: 56px;
     line-height: 68px;
     font-weight: 500;
+    color: black;
     
 }
 
@@ -140,7 +173,8 @@ img{
     font-size: 26px;
     line-height: 26px;
     font-weight: 300;
-    color: #a0b3e5;
+    /* color: #a0b3e5; */
+    color: black;
 }
 
 
