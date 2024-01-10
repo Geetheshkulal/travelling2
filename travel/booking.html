@@ -78,7 +78,14 @@
             <p>Ages:15-75, max of 8 per group</p>
             <p>Price: 1500 per adult</p>
            
-            <a href="/details.html" class="btn">Reserve Now</a>
+            <!-- <a href="/details.html" class="btn">Reserve Now</a> -->
+            <!-- slot booking javascript code in end of the page -->
+            <!-- <a id="reserveBtn" onclick="reserveSlot()" class="btn">Reserve Now</a>      <span id="booked"></span> slot(s) booked out of <span id="total"></span> available -->
+            <button class="btn" onclick="updateSlots('chikhale', this)">Reserve Now</button>
+            
+                <span class="booked">0</span> / <span class="total">8</span>
+
+                
         </div>
     </div>
 
@@ -92,7 +99,12 @@
             <p>Ages:15-75, max of 8 per group</p>
             <p>Price: 1000 per adult</p>
            
-            <a href="/details.html" class="btn">Reserve Now</a>
+            <!-- <a href="/details.html" class="btn">Reserve Now</a> -->
+            
+        <button class="btn" onclick="updateSlots('gadaikallu', this)">Reserve Now</button>
+        <span class="booked">0</span> / <span class="total">8</span>
+
+           
         </div>
     </div>
 
@@ -220,5 +232,50 @@
         <a href="#" class="btn">Reserve Now</a>
     </div>
 </div>
+
+
+<script>
+
+
+
+let initialBookedCount, initialTotalCount;
+
+window.onload = function() {
+    const bookedCount = localStorage.getItem('bookedCount');
+    const totalCount = localStorage.getItem('totalCount');
+
+    if (bookedCount !== null && totalCount !== null) {
+        initialBookedCount = parseInt(bookedCount);
+        initialTotalCount = parseInt(totalCount);
+        document.querySelector('.booked').textContent = bookedCount;
+        document.querySelector('.total').textContent = totalCount;
+        // localStorage.clear();
+    }
+}
+
+function updateSlots(place, btn) {
+    const bookedSpan = btn.parentElement.querySelector('.booked');
+    const totalSpan = btn.parentElement.querySelector('.total');
+    const bookedCount = parseInt(bookedSpan.textContent);
+    const totalCount = parseInt(totalSpan.textContent);
+
+    if (bookedCount < totalCount) {
+        bookedSpan.textContent = bookedCount + 1;
+        localStorage.setItem('bookedCount', bookedCount + 1);
+        window.location.href = '../details.html';
+       
+    }
+
+    if (bookedCount >= totalCount) {
+        btn.disabled = true;
+    }
+}
+
+
+
+
+
+
+      </script>
 </body>
 </html>
