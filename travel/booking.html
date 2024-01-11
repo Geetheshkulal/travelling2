@@ -77,15 +77,12 @@
             <p>Chikhale waterfalls are one of the less known inclines located near Chikale village which is about 40 kms from Belgaum in Karnataka. The site sits inside thick and quiet woods and makes for a great getaway spot. Chikhale waterfalls is really the most attractive of all the monsoon scenes in Belgaum. The trek which is fairly easy is stunning along with the fog and beautiful landscape.</p>
             <p>Ages:15-75, max of 8 per group</p>
             <p>Price: 1500 per adult</p>
+            <button class="btn" onclick="updateSlots('chikhale', this)">Reserve Now</button>
+            <span class="booked-chikhale"><lable></lable>0</span> / <span class="total-chikhale">8</span>
            
             <!-- <a href="/details.html" class="btn">Reserve Now</a> -->
             <!-- slot booking javascript code in end of the page -->
-            <!-- <a id="reserveBtn" onclick="reserveSlot()" class="btn">Reserve Now</a>      <span id="booked"></span> slot(s) booked out of <span id="total"></span> available -->
-            <button class="btn" onclick="updateSlots('chikhale', this)">Reserve Now</button>
-            
-                <span class="booked">0</span> / <span class="total">8</span>
-
-                
+          
         </div>
     </div>
 
@@ -98,11 +95,13 @@
             <p>Duration:11-14 hours</p>
             <p>Ages:15-75, max of 8 per group</p>
             <p>Price: 1000 per adult</p>
+            <button class="btn" onclick="updateSlots('gadaikallu', this)">Reserve Now</button>
+            <span class="booked-gadaikallu">0 booked</span> / <span class="total-gadaikallu">8 available</span>
            
             <!-- <a href="/details.html" class="btn">Reserve Now</a> -->
             
-        <button class="btn" onclick="updateSlots('gadaikallu', this)">Reserve Now</button>
-        <span class="booked">0</span> / <span class="total">8</span>
+        <!-- <button class="btn" onclick="updateSlots('gadaikallu', this)">Reserve Now</button>
+        <span class="booked">0</span> / <span class="total">8</span> -->
 
            
         </div>
@@ -118,9 +117,12 @@
             <p>Ages:2-75, max of 8 per group</p>
             <p>Price: 1500 per adult</p>
            
-            <a href="#" class="btn">Reserve Now</a>
+            <!-- <a href="#" class="btn">Reserve Now</a> -->
+            <button class="btn" onclick="updateSlots('honnavar', this)">Reserve Now</button>
+            <span class="booked-honnavar">0 booked</span> / <span class="total-honnavar">8 available</span>
         </div>
     </div>
+
     <div class="card">
         <img src="/images/lepakshi.png" alt="lepakshi" class="card-img">
         <div class="card-info">
@@ -130,7 +132,9 @@
             <p>Ages:any age, max of 8 per group</p>
             <p>Price: 1500 per adult</p>
            
-            <a href="/details.html" class="btn">Reserve Now</a>
+            <!-- <a href="/details.html" class="btn">Reserve Now</a> -->
+            <button class="btn" onclick="updateSlots('lepakshi', this)">Reserve Now</button>
+            <span class="booked-lepakshi">0 booked</span> / <span class="total-lepakshi">8 available</span>
         </div>
     </div>
 
@@ -235,47 +239,48 @@
 
 
 <script>
-
-
-
-let initialBookedCount, initialTotalCount;
-
-window.onload = function() {
-    const bookedCount = localStorage.getItem('bookedCount');
-    const totalCount = localStorage.getItem('totalCount');
+function updateCounts(place) {
+    const bookedSpan = document.querySelector(`.booked-${place}`);
+    const totalSpan = document.querySelector(`.total-${place}`);
+    const bookedCount = localStorage.getItem(`bookedCount${place}`);
+    const totalCount = localStorage.getItem(`totalCount${place}`);
 
     if (bookedCount !== null && totalCount !== null) {
-        initialBookedCount = parseInt(bookedCount);
-        initialTotalCount = parseInt(totalCount);
-        document.querySelector('.booked').textContent = bookedCount;
-        document.querySelector('.total').textContent = totalCount;
-        // localStorage.clear();
+        bookedSpan.textContent = bookedCount;
+        totalSpan.textContent = totalCount;
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    updateCounts('chikhale');
+    updateCounts('gadaikallu');
+    updateCounts('honnavar');
+    updateCounts('lepakshi');
+});
+
 function updateSlots(place, btn) {
-    const bookedSpan = btn.parentElement.querySelector('.booked');
-    const totalSpan = btn.parentElement.querySelector('.total');
+    const bookedSpan = btn.parentElement.querySelector(`.booked-${place}`);
+    const totalSpan = btn.parentElement.querySelector(`.total-${place}`);
     const bookedCount = parseInt(bookedSpan.textContent);
     const totalCount = parseInt(totalSpan.textContent);
 
+    const bookedCountKey = `bookedCount${place}`;
+    const totalCountKey = `totalCount${place}`;
+
     if (bookedCount < totalCount) {
         bookedSpan.textContent = bookedCount + 1;
-        localStorage.setItem('bookedCount', bookedCount + 1);
+        localStorage.setItem(bookedCountKey, bookedCount + 1);
+        localStorage.setItem(totalCountKey, totalCount);
+        updateCounts(place); // Update counts immediately
         window.location.href = '../details.html';
-       
     }
 
     if (bookedCount >= totalCount) {
         btn.disabled = true;
+        window.alert("slot full");
     }
+    // localStorage.clear();
 }
-
-
-
-
-
-
-      </script>
+    </script>
 </body>
 </html>
