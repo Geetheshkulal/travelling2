@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="./reset.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <input type="checkbox" id="check" />
+
+      <div class="login form">
+        <header>Reset password</header>
+        <form>
+          <input type="text" id="resetemail" placeholder="Enter your email" />
+          <button type="button" id="reset" class="button">
+            Reset password
+          </button>
+        </form>
+
+        <div class="signup">
+          <span class="signup">Don't have an account? <label for="check"><a href="/index.html">Signup</a></label></span>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getAuth, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+      let reset = document.getElementById("reset");
+      reset.addEventListener("click", function () {
+        let email = document.getElementById("resetemail").value;
+
+        const auth = getAuth();
+        sendPasswordResetEmail(auth, email)
+          .then(() => {
+            alert('Reset link sent to your email');
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // Handle error
+          });
+      });
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAHMMjoKpDcM8mTwIs_ARj8ulaM1KAbv5I",
+          authDomain: "news-portal-e2edb.firebaseapp.com",
+          databaseURL: "https://news-portal-e2edb-default-rtdb.firebaseio.com",
+          projectId: "news-portal-e2edb",
+          storageBucket: "news-portal-e2edb.appspot.com",
+          messagingSenderId: "176175139230",
+          appId: "1:176175139230:web:8802fb1afe71b899122e8f",
+          measurementId: "G-P5GQ65F0S1"
+        
+      };
+
+      const app = initializeApp(firebaseConfig);
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reset password</title>
+    <link rel="stylesheet" href="./reset.css">
+</head>
+<body></body>
+
+    <div class="container">
+        <input type="checkbox" id="check">
+    
+        <div class="login form">
+          <header>Reset password</header>
+          <form  onsubmit="">
+            <input type="text" id="email" placeholder="Enter your email">
+            <button class="button">Reset password</button>
+          </form>
+     
+          <div class="signup">
+            <span class="signup">Don't have an account?
+             <label for="check"><a href="/index.html">Signup</a></label>
+            </span>
+          </div>
+        </div>
+    </div>
+
+</body>
+
+<script  type="module"></script>
+</html> -->
+
+
