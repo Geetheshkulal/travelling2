@@ -6,6 +6,8 @@ const path=require('path')
 
 const app = express();
 
+app.use(express.static('public'))
+
 // Step 1: Define a schema
 const bookingSchema = new mongoose.Schema({
   name: String,
@@ -37,7 +39,16 @@ const database = () => {
 
 database();
 app.get('/',(req,res)=>{
-  res.sendFile(__dirname+'/details.html')
+  res.sendFile(__dirname+'/index.html')
+ 
+})
+app.get('/login',(req,res)=>{
+  res.sendFile(__dirname+'/login.html')
+ 
+})
+app.get('/travel',(req,res)=>{
+  res.sendFile(__dirname+'/travel.html')
+ 
 })
 
 // Express middleware to parse incoming form data
