@@ -36,7 +36,7 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
     createUserWithEmailAndPassword(auth, obj.email, obj.password)
     .then(function(success){
         alert('signup success');
-        window.location.href = "/travel.html";
+        window.location.href = "/travel";
     })
     .catch(function(err){
         alert("error" +err)

@@ -46,8 +46,24 @@ app.get('/login',(req,res)=>{
   res.sendFile(__dirname+'/login.html')
  
 })
+app.get('/reset',(req,res)=>{
+  res.sendFile(__dirname+'/reset.html')
+ 
+})
 app.get('/travel',(req,res)=>{
   res.sendFile(__dirname+'/travel.html')
+ 
+})
+app.get('/booking',(req,res)=>{
+  res.sendFile(__dirname+'/booking.html')
+ 
+})
+app.get('/index',(req,res)=>{
+  res.sendFile(__dirname+'/index.html')
+ 
+})
+app.get('/details',(req,res)=>{
+  res.sendFile(__dirname+'/details.html')
  
 })
 
@@ -79,6 +95,6 @@ app.post('/submit', async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log('Server is running on port 5000');
+app.listen(5500, () => {
+  console.log('Server is running on port 5500');
 });

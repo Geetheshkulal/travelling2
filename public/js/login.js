@@ -35,9 +35,10 @@ window.login = function (e) {
 
   signInWithEmailAndPassword(auth, obj.email, obj.password)
     .then(function (success) {
+
       alert('Login success');
 
-      window.location.href = "../travel.html";
+      window.location.href = "/travel";
     })
     .catch(function (err) {
       alert("Error: " + err.message);
