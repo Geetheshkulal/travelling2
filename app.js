@@ -16,7 +16,6 @@ const bookingSchema = new mongoose.Schema({
   touristPlace: String,
   adults: Number,
   children: Number,
-  paymentDetails: String,
 });
 
 // Step 2: Create a model based on the schema
@@ -73,28 +72,30 @@ app.use(express.urlencoded({ extended: true }));
 // Step 3: Handle form submission and save data to MongoDB
 app.post('/submit', async (req, res) => {
   try {
-    // Create a new instance of the Booking model with form data
+   
     const newBooking = new Booking({
       name: req.body.name,
       phone: req.body.phone,
       email: req.body.email,
+      // touristPlace: req.body.place,
       touristPlace: req.body['tourist-place'],
       adults: req.body.adults,
       children: req.body.children,
-      paymentDetails: req.body['payment-details'],
+      // paymentDetails: req.body['payment-details'],
     });
 
     // Save the new booking to the database
     await newBooking.save();
 
     console.log('Form data saved to MongoDB');
-    res.send('Form submitted successfully');
+    res.sendFile(__dirname+'/popup.html')
+    // res.send('Form submitted successfully');
   } catch (error) {
     console.error('Error saving form data to MongoDB:', error);
     res.status(500).send('Internal Server Error');
   }
 });
 
-app.listen(5500, () => {
-  console.log('Server is running on port 5500');
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
 });

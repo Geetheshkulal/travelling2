@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pop-up Message</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .popup {
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+            background-color: #00f0d6;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+         transition: opacity 0.3s ease-in-out;
+            width: 20%;
+
+        }
+
+      
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: black;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        p{
+            font-size: 30px;
+            color: black;
+        }
+        a{
+            font-size: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myPopup" class="popup">
+        <span id="close" class="close">&times;</span>
+        <p>Form submitted successfully!</p>
+        <a href="/travel">go to home page..click here</a>
+    </div>
+
+    <script>
+     
+
+        document.getElementById("close").addEventListener("click", function() {
+            document.getElementById("myPopup").classList.remove("show");
+            setTimeout(function () {
+                document.getElementById("myPopup").style.display = "none";
+            }, 500); 
+        });
+    </script>
+</body>
+</html>

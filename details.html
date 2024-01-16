@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Booking Form</title>
+ 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,6 +51,17 @@
             background-color: #316533;
         }
 
+    .styled-select option.service-small {
+    font-size: 17px;
+}
+.panel{
+    width:100%;
+    background-color: yellow;
+    padding: 4px;
+border-radius: 4px;
+    margin-bottom: 10px;
+}
+
     </style>
 </head>
 <body>
@@ -65,16 +77,27 @@
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="tourist-place">Choose Tourist Place:</label>
-    <select id="tourist-place" name="tourist-place" required>
-        <option value="place1">Tourist Place 1</option>
-        <option value="place2">Tourist Place 2</option>
-       <!-- <option value="place1">Tourist Place 1</option> 
-        <option value="place1">Tourist Place 1</option>
-        <option value="place1">Tourist Place 1</option>
-        <option value="place1">Tourist Place 1</option>  -->
-        <!-- Add more options as needed -->
+    <label for="place">Choose Tourist Place:</label>
+    <div class="styled-select">
+    <select  id="place" name="tourist-place" required>
+        <option value="chikhale falls" class="service-small" >chikhale falls</option>
+        <option value="gadaikallu" class="service-small">gadaikallu </option>
+        <option value="Honnavar" class="service-small">Honnavar</option>
+        <option value="Kunti Betta" class="service-small">Kunti Betta</option>
+        <option value="kappil beach" class="service-small">kappil beach</option>
+        <option value="Sri Karinjeshwara Temple" class="service-small">Sri Karinjeshwara Temple</option>
+        <option value="Korigad Fort" class="service-small">Korigad Fort </option>
+        <option value="Posadi gumpe" class="service-small">Posadi gumpe </option>
+        <option value="Ranipuram" class="service-small">Ranipuram</option>
+        <option value="Lepakshi" class="service-small">Lepakshi</option>
+        <option value="varanga" class="service-small">varanga</option>
+        <option value="St. Mary's Islands" class="service-small">St. Mary's Islands</option>
+        <option value="Netrani" class="service-small">Netrani</option>
+        <option value="Hosahalli Gutta" class="service-small">Hosahalli Gutta</option>
+        <option value="Pavoor Uliya" class="service-small">Pavoor Uliya</option>
+        <option value="Nellitheertha" class="service-small">Nellitheertha</option>
     </select>
+</div>
 
     <label for="adults">Number of Adults:</label>
     <input type="number" id="adults" name="adults" min="1" required>
@@ -83,11 +106,17 @@
     <input type="number" id="children" name="children" min="0" required>
 
     <label for="payment-details">Payment Details:</label>
-    <input type="text" id="payment-details" name="payment-details" required>
+    <!-- <input type="text" id="payment-details" name="payment-details" required> -->
+    <div class="panel">
+        <p>For queries related to Travel expenses please do contact us. As expenses is dependent on season of places u choose</p>
+    </div>
 
-    <button type="submit">Submit</button>
+    <button type="submit" id="myButton">Submit</button>
 </form>
 
 </body>
+
 <script src="/app.js"></script>
+
+
 </html>

@@ -8,6 +8,8 @@
     <script src="js/search.js"></script>
 </head>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
     body {
     font-family: Arial, sans-serif;
 }
@@ -18,8 +20,9 @@
 }
 #search-bar {
             margin-bottom: 20px;
-            width: 20%;
+            width: 40%;
             height: 25px;
+            border-radius: 5px;
 
         }
 
@@ -49,6 +52,7 @@
 .card-info h3 {
     margin: 0;
     color: #4a4a4a;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-info h4 {
@@ -58,9 +62,11 @@
 
 .card-info p {
     margin: 5px 0;
-    color: #9b9b9b;
+    color: black;
 }
-
+.card:hover{
+    box-shadow: 5px 10px #888888;
+}
 .btn {
     display: inline-block;
     background-color: #ff5e14;
@@ -92,7 +98,7 @@
             <h4>About</h4>
             <p>Chikhale waterfalls are one of the less known inclines located near Chikale village which is about 40 kms from Belgaum in Karnataka. The site sits inside thick and quiet woods and makes for a great getaway spot. Chikhale waterfalls is really the most attractive of all the monsoon scenes in Belgaum. The trek which is fairly easy is stunning along with the fog and beautiful landscape.</p>
             <p>Ages:15-75, max of 8 per group</p>
-            <p>Price: 1500 per adult</p>
+            <p>Price: 400 per adult</p>
             <button class="btn" onclick="updateSlots('chikhale', this)">Reserve Now</button>
             <span class="booked-chikhale">0</span> booked / <span class="total-chikhale">8</span> Available
            
@@ -110,7 +116,7 @@
             <p>Gadaikallu is about 8km away from Belthangady.A total of 1876 steps take trekkers from the base to the summit. These steps are cut out of the granite hill. At the top stands the remains of the Jamalabad Fort and a breath-taking view of the Kudremukh range. It’s categorized as a medium-level trek.</p>
             <p>Duration:11-14 hours</p>
             <p>Ages:15-75, max of 8 per group</p>
-            <p>Price: 1000 per adult</p>
+            <p>Price: 500 per adult</p>
             <button class="btn" onclick="updateSlots('gadaikallu', this)">Reserve Now</button>
             <span class="booked-gadaikallu">0</span> booked / <span class="total-gadaikallu">8</span> Available
            
@@ -131,7 +137,7 @@
             <p>Mangrove Boardwalk in Honavar is also known as ‘Kandla Vana’.Sharavathi Mangrove Walkway is a well paved wooden walkway that takes the visitors in the middle of the Mangrove forest and Sharavathi river. After walking for around 1.5 kms, you will reach the major attraction of the walkway ie, narrow wooden walkway that is built across an island like place in between the Mangrove forest which is definitely a wonderful experience.</p>
             <p>Duration:4-7 hours</p>
             <p>Ages:2-75, max of 8 per group</p>
-            <p>Price: 1500 per adult</p>
+            <p>Price: 300 per adult</p>
            
             <!-- <a href="#" class="btn">Reserve Now</a> -->
             <button class="btn" onclick="updateSlots('honnavar', this)">Reserve Now</button>
@@ -146,7 +152,7 @@
             <h4>About</h4>
             <p>the place where Jatayu fell after being wounded by Ravana. Rama is said to have commanded the bird to rise, saying Le Pakshi (literally: "Get up, Bird" in Telugu), hence the name for the village. There is a huge statue of Nandi (Shiva's bull) found here which is said to be the biggest monolithic Nandi in India.</p>
             <p>Ages:any age, max of 8 per group</p>
-            <p>Price: 1500 per adult</p>
+            <p>Price: 1000 per adult</p>
            
             <!-- <a href="/details.html" class="btn">Reserve Now</a> -->
             <button class="btn" onclick="updateSlots('lepakshi', this)">Reserve Now</button>
@@ -162,7 +168,7 @@
             <h4>About</h4>
             <p>A dip in its pristine waters is considered sacred and hence, there is always a multitude of visitors to this beautiful beach in Southern Kerala. Its remarkable stretch of red laterite cliffs are an added attraction here. One can gaze into the sunset from its summit or enjoy the medicinal natural spring that originates here. It is a destination that keeps surprising you at every turn. </p>
             <p>Amax of 8 per group</p>
-            <p>Price: 1000 per adult</p>
+            <p>Price: 700 per adult</p>
             <!-- <a href="/details.html" class="btn">Reserve Now</a> -->
             <button class="btn" onclick="updateSlots('kappil', this)">Reserve Now</button>
             <span class="booked-kappil">0</span> booked/ <span class="total-kappil">8</span> Available
@@ -177,7 +183,7 @@
             <p>A famous Lord Shiva temple located Karinja in Bantwala Taluk, Kavalamudur Village, Dakshina Kannada, Karnataka, India. This temple is situated on the peak of Karinja Hill, about 1000 feet above sea level in Kodyamale hills, Karinjeshwara.</p>
             <p>Duration:4-7 hours</p>
             <p>Ages:2-75, max of 8 per group</p>
-            <p>Price: 1500 per adult</p>
+            <p>Price: 500 per adult</p>
             <!-- <a href="#" class="btn">Reserve Now</a> -->
             <button class="btn" onclick="updateSlots('karinjeshwara', this)">Reserve Now</button>
             <span class="booked-karinjeshwara">0</span> booked/ <span class="total-karinjeshwara">8</span> Available
@@ -191,7 +197,7 @@
             <p>Korigad is a hill fort located about 20 km south of Lonavla in Pune district, Maharashtra, India. Its date of construction is not known but likely predates 1500. It is about 923 m above sea level. The planned township of Aamby Valley is built over the fort's southern and eastern foothills. The closest village is Peth Shahpur, about 1 km north of the fort. </p>
             <p>Duration:4-7 hours</p>
             <p>Ages:2-75, max of 8 per group</p>
-            <p>Price: 1500 per adult</p>
+            <p>Price: 200 per adult</p>
             <!-- <a href="#" class="btn">Reserve Now</a> -->
             <button class="btn" onclick="updateSlots('Korigad', this)">Reserve Now</button>
             <span class="booked-kori">0</span> booked/ <span class="total-kappil">8</span> Available
@@ -204,7 +210,7 @@
             <h4>About</h4>
             <p>The nearest village to Posadi Gumpe is Paivalike.The hilltop offers a view of the Arabian Sea, Mangalore and Kudremukh. The place is not well-inhabited and the tourists who wish to trek the hill are requested to carry food and water along.</p>
             <p>Ages:2-75, max of 8 per group</p>
-            <p>Price: 1500 per adult</p>
+            <p>Price: 800 per adult</p>
            
             <button class="btn" onclick="updateSlots('posadi', this)">Reserve Now</button>
             <span class="booked-posadi">0</span> booked/ <span class="total-posadi">8</span> Available
@@ -217,7 +223,7 @@
             <h4>About</h4>
             <p> Once known as Madathumala, it borders Karnataka and boasts of some of the best trekking trails in the area. Regular buses are available on this route and jeep rides are another favourite among all our visitors. The versatile vegetation that includes evergreen shola woods, monsoon forests and grasslands make it a good place to relax and take some time off from the rigors of daily life</p>
             <p>Ages:2-75, max of 8 per group</p>
-            <p>Price: 1500 per adult</p>
+            <p>Price: 450 per adult</p>
             <!-- <a href="#" class="btn">Reserve Now</a> -->
             <button class="btn" onclick="updateSlots('rani', this)">Reserve Now</button>
             <span class="booked-rani">0</span> booked/ <span class="total-rani">8</span> Available
@@ -229,7 +235,7 @@
             <h4>About</h4>
             <p>The most prominent amongst them include the Kere Basadi and the Neminath Basadi. The temples make it a prominent stop on the Jain pilgrim circuit.Set against a lush green backdrop, the lake surrounding the temple is a picture of exquisite beauty. Water lilies cover the surface while freshwater fish, turtles and other forms of aquatic life live underwater.</p>
             <p>Ages:2-75, max of 8 per group</p>
-            <p>Price: 1500 per adult</p>
+            <p>Price: 150 per adult</p>
            
             <button class="btn" onclick="updateSlots('varanga', this)">Reserve Now</button>
             <span class="booked-varanga">0</span> booked/ <span class="total-varanga">8</span> Available
@@ -242,7 +248,7 @@
             <h4>About</h4>
             <p>It is a beautiful cluster of islands and is quite popular among the people of the surrounding areas. What is interesting about St Mary’s Island is that, as popular as it is among the locals, it is still pretty unknown to a lot of people who are left stunned by the beauty and uniqueness of the island when they finally do visit.</p>
             <p>Ages:2-75, max of 8 per group</p>
-            <p>Price: 1500 per adult</p>
+            <p>Price: 350 per adult</p>
            
             <button class="btn" onclick="updateSlots('st-marys', this)">Reserve Now</button>
             <span class="booked-st-marys">0</span> booked/ <span class="total-st-marys">8</span> Available
@@ -256,7 +262,7 @@
         <h4>About</h4>
         <p> The island can be seen from the mainland over 15 km away. Views above give this island the appearance of being heart-shaped. It has scuba diving facilities </p>
         <p>Ages:2-75, max of 8 per group</p>
-        <p>Price: 1500 per adult</p>
+        <p>Price: 400 per adult</p>
        
         <button class="btn" onclick="updateSlots('netrani', this)">Reserve Now</button>
         <span class="booked-netrani">0</span> booked/ <span class="total-netrani">8</span> Available
