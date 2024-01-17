@@ -761,6 +761,7 @@ footer .rights a {
 }
 
 
+
 .content-card {
     position: relative;
     display: inline-block;
@@ -784,7 +785,7 @@ footer .rights a {
     z-index: 1;
     bottom: 120%;
     left: 50%;
-    margin-left: -80px;
+    margin-left: -30px;
   }
   
   /* Popup arrow */
