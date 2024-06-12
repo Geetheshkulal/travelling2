@@ -4,33 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Sign up</title>
     <link rel="stylesheet" type="text/css" href="css/signup.css">
-
 </head>
 <body>
-
     <div class="container">
-        <input type="checkbox" id="check">
-    
         <div class="login form">
-          <header>Sign up</header>
-          <form onsubmit="signUp(event)">
-            <input type="text" id="name" placeholder="Enter your name">
-            <input type="text" id="email" placeholder="Enter your email">
-            <input type="password" id="password"  placeholder="Enter your password">
-            <!-- <input type="button" class="button" value="Signup"> -->
-            <button class="button">Sign up</button>
-          </form>
-          <div class="signup">
-            <span class="signup">Already have an account?
-             <label for="check"><a href="/login">Login</a></label>
-            </span>
-          </div>
+            <header>Sign up</header>
+            <form action="/signup" method="post" id="signupForm">
+                <input type="text" name="name" placeholder="Enter your name">
+                <input type="text" name="email" placeholder="Enter your email">
+                <input type="password" name="password" placeholder="Enter your password">
+                <button type="submit" class="button">Sign up</button>
+            </form>
+            <div class="signup">
+                <span class="signup">Already have an account?
+                    <a href="/login">Login</a>
+                </span>
+            </div>
         </div>
     </div>
 
+
 </body>
-<script src="/app.js"></script>
-<script src="js/signup.js" type="module"></script>
+
+    <!-- Script to display flashed messages -->
+    <script>
+      // Display flashed messages if they exist
+      const successMessage = '<%= flash('success') %>';
+      const errorMessage = '<%= flash('error') %>';
+
+      if (successMessage) {
+          alert(successMessage);
+      } else if (errorMessage) {
+          alert(errorMessage);
+      }
+  </script>
 </html>

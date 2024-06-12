@@ -1,36 +1,32 @@
+<!-- login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-   
     <div class="container">
-        <input type="checkbox" id="check">
-    
         <div class="login form">
-          <header>Login</header>
-          <form  onsubmit="login(event)" method="post" action="/travel.html">
-            <input type="text" id="email" placeholder="Enter your email">
-            <input type="password" id="password"  placeholder="Enter your password">
-            <button class="button">Login</button>
-          </form>
-        <div class="reset">
-          <a href="/reset">Forgot password..?</a>
-
-        </div>
-          <div class="signup">
-            <span class="signup">Don't have an account?
-             <label for="check"><a href="/">Signup</a></label>
-            </span>
-          </div>
+            <header>Login</header>
+            <form action="/login" id="loginForm" method="post">
+                <input type="text" name="email" placeholder="Enter your email">
+                <input type="password" name="password" placeholder="Enter your password">
+                <button type="submit" class="button">Login</button>
+            </form>
+            <div class="reset">
+                <a href="/reset">Forgot password..?</a>
+            </div>
+            <div class="signup">
+                <span class="signup">Don't have an account?
+                    <a href="/">Signup</a>
+                </span>
+            </div>
         </div>
     </div>
 
+ 
 </body>
-
-<script src="js/login.js" type="module"></script>
 </html>
